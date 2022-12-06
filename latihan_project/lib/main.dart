@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'pages/myactionbutton.dart';
 import 'pages/mybottombar.dart';
+import 'pages/foodlistview.dart';
+import 'pages/Selecttypesection.dart';
+import 'pages/menuitemlist.dart';
+import 'pages/myappbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +20,13 @@ class MyApp extends StatelessWidget {
       title: 'project UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       home: ProjectPage(),
     );
   }
 }
+
 class ProjectPage extends StatelessWidget {
   const ProjectPage({super.key});
 
@@ -30,24 +34,30 @@ class ProjectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: MyActionButton(),
-      floatingActionButtonLocation: 
-      FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: MyBottomBar(),
       body: Container(
         child: ListView(
           children: [
-            SizedBox(height: 16.0,),
+            SizedBox(
+              height: 16.0,
+            ),
             MyAppBar(),
-            SizedBox(height: 16.0,),
-            FoodListView(),
-            SizedBox(height: 16.0,),
-            SelecTypeSection(),
-            SizedBox(height: 16.0,),
-            MenuItemList(),
+            SizedBox(
+              height: 16.0,
+            ),
+            FoodListview(),
+            SizedBox(
+              height: 16.0,
+            ),
+            SelectTypeSection(),
+            SizedBox(
+              height: 16.0,
+            ),
+            MenuItemsList(),
           ],
         ),
       ),
     );
   }
 }
-
